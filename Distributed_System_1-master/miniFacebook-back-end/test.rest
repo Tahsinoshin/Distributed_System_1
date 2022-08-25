@@ -1,0 +1,62 @@
+POST  http://localhost:4000/api/users
+Content-Type: application/json
+
+{
+    "firstName" : "Fahim",
+    "lastName" : "Morshed",
+    "email" : "bsse1102@iit.du.ac.bd",
+    "password" : "//Temujin007//"
+    
+}
+
+###
+
+GET http://localhost:4000/api/users
+Content-Type: application/json
+
+###
+
+POST http://localhost:4000/api/auth
+Content-Type: application/json
+
+{
+    "email" : "bsse1102@iit.du.ac.bd",
+    "password" : "//Temujin007//"
+}
+
+###
+
+POST http://localhost:4000/api/post
+Content-Type: application/json
+
+{
+    "message": "ami ghumaitasi",
+    "date": "18th Jul 2022",
+    "jwtToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6IkZhaGltIE1vcnNoZWQiLCJpYXQiOjE2NTgxNTU3NzQsImV4cCI6MTY1ODc2MDU3NH0.E_Ot51egDFjuIdbhnbv3jLzobQLeDAgn8CJfoYGfSnM"
+}
+
+###
+
+GET http://localhost:4000/api/post
+Content-Type: application/json
+
+###
+
+POST http://localhost:4000/api/post/image
+Content-Type: application/json
+
+{
+    "fileName": "test-from-fahim-again.jpg",
+    "filePath": "/home/iit/Downloads/index.jpeg",
+    "metaData": {
+        "Content-Type": "application/octet-stream",
+        "X-Amz-Meta-Testing": 1234,
+        "example": 5678,
+        "username": "fahim-iit"
+    }
+}
+
+###
+
+GET http://localhost:4000/api/post/image/1659264791834.png
+Content-Type: application/json
